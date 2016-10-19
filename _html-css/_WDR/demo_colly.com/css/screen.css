@@ -1,0 +1,279 @@
+/*reset style
+----------------------------------------------------------------*/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body,h1,h2,h3,h4,h5,h6,ul,ol,li,p,form,fieldset,table,td,img,div,dl,dt,dd,input {
+    margin: 0;
+    padding: 0;
+}
+body {
+   overflow: scroll;
+}
+img {
+   border: none;
+}
+li {
+   list-style: none;
+}
+input,select,textarea {
+   outline: none;
+}
+textarea {
+   resize: none;
+}
+a {
+   text-decoration: none;
+   cursor: pointer;
+}
+input,button {
+   border: none;
+}
+input,select,textarea {
+   background: none;
+}
+.clearfix:after {
+     content: ".";   
+     display: block;     
+     clear: both;       
+     visibility: hidden;         
+     line-height: 0;          
+     height: 0;       
+     font-size: 0;          
+}
+.clearfix {
+     zoom:1;
+}
+.fl {
+   float: left;
+}
+.fr {
+   float: right;
+}
+ul,a {
+   overflow: hidden;
+}
+
+/*body & 通用
+------------------------------------------------------------------*/
+body {
+	    /*text-rendering: optimizeLegibility;*/
+	font-size: 13px;
+  line-height: 22px;
+  color: #333;
+  background: #FFF url(../images/graph-tile.png);
+  padding: 8px;
+}
+#page {
+    width: 946px;
+    margin: 20px auto;
+    padding: 30px 17px 10px 17px;
+}
+/*主体
+-----------------------------------------------------------------*/
+ul li a span {
+    display: block;
+    text-align: center;
+}
+ul li a span.strap {
+    color: #beb2b2;
+    font-style: italic;
+    display: block;
+}
+ul li a span.label {
+    padding: 2px 0 105px 0;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #000;
+}
+/*页头
+==================================*/
+#branding {
+    margin: 0 0 18px 0;
+    padding: 8px 0 20px 0;
+}
+#branding a {
+    display: block;
+    width: 460px;
+    height: 86px;
+    margin: -22px auto 0 auto;
+    text-indent: -9999px;
+    background: url(../images/logo.png) no-repeat 0 0;
+}
+/*内容
+==================================*/
+/*第一部分*/
+ul#navigation-pri {
+    margin: 12px 0 0 0;
+    padding: 0 0 41px 0;
+    /*background: transparent;*/
+}
+ul#navigation-pri li {
+    line-height: 18px;
+    float: left;
+    width: 207px;
+    margin: 0 10px 10px 0;
+    padding: 10px;
+    border: 1px solid #DDD;
+    color: #333;
+    -webkit-box-shadow: 1px 1px 7px rgba(153, 153, 153, 0.2);
+    -moz-box-shadow: 1px 1px 7px rgba(153, 153, 153, 0.2);
+    box-shadow: 1px 1px 7px rgba(153, 153, 153, 0.2);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    /*background: url(../images/card.png);*/
+}
+ul#navigation-pri li:last-child {
+    margin: 0;
+}
+ul#navigation-pri li a:first-child {
+    text-align: center;
+    /*display: inline-block;*/
+}
+ul li#biography a span.label {
+    background: url(../images/n-pig.png) no-repeat center bottom;
+}
+ul li#journal a span.label {
+    background: url(../images/n-butterfly.png) no-repeat center bottom;
+}
+ul li a.dest:link, ul li a.dest:visited, ul li a.arch:link, ul li a.arch:visited {
+    color: #ba1820;
+}
+ul li#archive a span.label {
+    background: url(../images/n-bigfish.png) no-repeat center bottom;
+}
+ul li#contact a span.label {
+    background: url(../images/n-crab.png) no-repeat center bottom;
+}
+ul li a.dest .fl {
+    float: left;
+    margin: 7px 4px 0 0;
+    padding: 0;
+    font-size: 65px;
+    line-height: 62%;
+    /*color: #ba1820;*/
+}
+/*第二部分*/
+h2.ext-dests {
+    text-indent: -9999px;
+}
+h2.ext-dests a {
+    display: block;
+    height: 20px;
+    margin: 20px 0 32px 0;
+    padding: 0;
+    background: url(../images/ext-refs.png) center top no-repeat;
+}
+ul.subnav {
+    margin: 0 0 10px 0;
+}
+#subnav-d {
+    padding: 0 0 50px 0;
+}
+ul.subnav li {
+    float: left;
+    width: 207px;
+    padding: 10px;
+    font-size: 13px;
+    margin-right: 10px;
+    border: 1px solid #DDD;
+    -webkit-box-shadow: 1px 1px 7px rgba(153, 153, 153, 0.2);
+    -moz-box-shadow: 1px 1px 7px rgba(153, 153, 153, 0.2);
+    box-shadow: 1px 1px 7px rgba(153, 153, 153, 0.2);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    /*background: url(../images/site/card.png);*/
+}
+ul.subnav li:last-child {
+    margin: 0;
+}
+ul li#delicious a span.label {
+    background: url(../images/n-beetle.png) no-repeat center bottom;
+}
+ul li#instagram a span.label {
+    background: url(../images/n-fish2.png) no-repeat center bottom;
+}
+ul li#flickr a span.label {
+    background: url(../images/n-flea.png) no-repeat center bottom;
+}
+ul li#twitter a span.label {
+    background: url(../images/n-salamander.png) no-repeat center bottom;
+}
+/*页脚
+==========================*/
+div#siteinfo {
+    position: relative;
+    text-align: center;
+    padding: 125px 0 0px 0;
+    color: #999;
+    background: url(../images/deranged.png) no-repeat top center;
+}
+
+/*媒体查询
+-------------------------------------------------------------------*/
+/*原来的page宽为946px*/
+@media (min-device-width:1024px) and (max-width:989px), 
+screen and (max-device-width:480px),
+(max-device-width:480px) and (orientation:landscape),
+(min-device-width:481px) and (max-device-width:1024px) and (orientation:portrait) {
+    #page {
+      width: 468px;
+    }
+    .home ul#navigation_pri { 
+        padding-bottom:30px; 
+    }
+    ul#navigation_pri li, ul.subnav li { 
+        margin-bottom:10px; 
+    }
+    ul#navigation_pri li:nth-child(even), ul[id^=subnav] li:nth-child(even) { 
+        margin-right:0; 
+    }
+    #page ul[id^=subnav] {
+       margin-bottom:0; 
+    }
+    div#content_pri { 
+        width:400px; 
+        margin:0; 
+        padding:0px 30px 0 0px;  
+        border-left:0px 
+        dashed #DDD; 
+    }
+    div#siteinfo p { 
+        font-size:14px; 
+    }
+}
+
+/*原来的page宽为946px*/
+/*@media (min-device-width:1024px) and (max-width:989px), 
+screen and (max-device-width:480px),
+(max-device-width:480px) and (orientation:landscape),
+(min-device-width:481px) and (max-device-width:1024px) and (orientation:portrait) {*/
+@media (min-device-width:1024px) and (max-width:509px),
+(max-device-width:480px) and (orientation:portrait) {
+    div#page { padding:30px 0px 10px 0px; width:306px; }
+    ul li#biography, ul li#journal, ul li#archive { margin:0 0 10px 0; }
+    .home ul#navigation_pri { padding-bottom:30px; }
+    h1 { margin:0; }
+    #branding a { width:306px; background-position:center top; }
+    #branding a:hover { background-position:center -90px; }
+    ul#navigation-pri li, ul[id^=subnav] li{ 
+      width:285px; 
+    }
+    .biography ul#navigation_pri li a span.label, ul#navigation_pri li a span.label, 
+    .archive ul#navigation_pri li a span.label, .contact ul#navigation_pri li a span.label, 
+    .biography ul#subnav-a li a span.label, .journal ul#subnav-a li a span.label,
+     .archive ul#subnav-a li a span.label, .contact ul#subnav-a li a span.label, 
+     .biography ul#subnav-b li a span.label, .journal ul#subnav-b li a span.label, 
+     .archive ul#subnav-b li a span.label, .contact ul#subnav-b li a span.label {
+      padding:2px 0 0px 0; background:none; 
+    }
+    .home ul#navigation-pri li a span.label, .external ul#navigation_pri li a span.label { padding:2px 0 105px 0; background-repeat:no-repeat; }
+    div#siteinfo p { font-size:12px; }
+}

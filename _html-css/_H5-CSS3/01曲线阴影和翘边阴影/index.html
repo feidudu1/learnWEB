@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>曲线阴影和翘边阴影</title>
+    <link rel="stylesheet" href="main.css">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<style>
+    body {
+        font-family: Arial;
+        font-size: 20px;
+    }
+    body,ul,li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    h1 {
+        text-transform: capitalize;
+        text-align: center;
+        line-height: 200px;
+    }
+    .wrap {
+        width: 70%;
+        height: 200px;
+        margin: 50px auto;
+        background: #fff;
+    }
+    .effect {
+        position: relative;
+        -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.3),0 0 50px rgba(0,0,0,.1) inset;
+        -moz-box-shadow: 0 1px 4px rgba(0,0,0,.3),0 0 50px rgba(0,0,0,.1) inset;
+        box-shadow: 0 1px 4px rgba(0,0,0,.3),0 0 50px rgba(0,0,0,.1) inset;
+    }
+    .effect:before,.effect:after {
+        content: "";
+        /*background-color: #f00;*/
+        position: absolute;
+        top: 50%;
+        bottom: -1px;
+        left: 10px;
+        right: 10px;
+        -webkit-box-shadow: 0 0 20px rgba(0,0,0,.8);
+        -moz-box-shadow: 0 0 20px rgba(0,0,0,.8);
+        box-shadow: 0 0 20px rgba(0,0,0,.8);
+        border-radius: 100px/10px;
+        z-index: -1;
+    }
+/*<!--桥边阴影-->*/
+    .box {
+        width: 980px;
+        /*height: auto;*/
+        clear: both;
+        overflow: hidden;
+        margin: 20px auto;
+    }
+    .box li {
+        width: 300px;
+        height: 210px;
+        margin: 20px 10px;
+        /*display: inline-block;*/
+        float: left;
+        border: 2px solid #efefef;
+        box-shadow: 0 1px 4px rgba(0,0,0,.27),0 0 60px rgba(0,0,0,.1) inset;
+        position: relative;
+        background: #fff;
+    }
+    .box img {
+        width: 290px;
+        height: 200px;
+        margin: 5px;
+    }
+    .box li:before {
+        content: "";
+        position: absolute;
+        width: 90%;
+        height: 80%;
+        left: 20px;
+        bottom: 8px;
+        /*background: #f00;*/
+        box-shadow: 0 8px 20px rgba(0,0,0,.6);
+        transform: skew(-12deg) rotate(-4deg);
+        background: transparent;
+        z-index: -2;
+    }
+    .box li:after {
+        content: "";
+        position: absolute;
+        width: 90%;
+        height: 80%;
+        right: 20px;
+        bottom: 8px;
+        /*background: #f00;*/
+        box-shadow: 0 8px 20px rgba(0,0,0,.6);
+        transform: skew(12deg) rotate(4deg);
+        background: transparent;
+        z-index: -2;
+    }
+</style>
+</head>
+<body>
+<!--曲线阴影-->
+<div class="wrap effect">
+    <h1>shadow effect</h1>
+</div>
+<!--桥边阴影-->
+<ul class="box">
+    <li><img src="img1.png"> </li>
+    <li><img src="img2.png"> </li>
+    <li><img src="img3.png"> </li>
+</ul>
+</body>
+</html>

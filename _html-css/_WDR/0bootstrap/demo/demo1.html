@@ -1,0 +1,292 @@
+<!DOCTYPE html>  
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <meta name="renderer" content="webkit">  
+  <title>浏览器博物馆</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <style type="text/css">
+		body {
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+		.carousel {
+			height: 500px;
+			background-color: #000;
+			margin-bottom: 60px;
+		}
+		.carousel .item {
+			height: 500px;
+			background-color: #000;
+		}
+		.carousel img {
+			width: 100%;
+		}
+		.carousel-caption {
+			margin-bottom: 20px;
+			font-size: 20px;
+			line-height: 1.8;
+		}
+		.col-md-4 img {
+			width: 30%;
+		}
+		.col-md-4 {
+			text-align: center;
+		}
+		hr.divider {
+			margin: 40px 0;
+		}
+		.tab-content img {
+			padding-top: 30px;
+			width: 80%;
+		}
+		.tab-content h1 {
+			color: blue;
+			font-weight: bold;
+			margin-top: 120px;
+		}
+		.text-muted {
+			font-weight: normal;
+			margin-left: 15px;
+			font-size: 24px;
+		}
+		.col-md-7 {
+			vertical-align: middle;
+		}
+  </style>
+</head>
+<body>
+<!-- 导航 -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="#" class="navbar-brand">现代浏览器博物馆</a>
+		</div>
+		<div class="collapse navbar-collapse" id="navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#">综 述</a></li>
+				<li><a href="#">简 述</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">特 点<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#tab-chrome">Chrome</a></li>
+						<li><a href="#tab-firefox">Firefox</a></li>
+						<li><a href="#tab-safari">Safari</a></li>
+						<li><a href="#tab-opera">Opera</a></li>
+						<li><a href="#tab-ie">IE</a></li>
+					</ul>
+				</li>					
+				<li><a href="#" data-toggle="modal" data-target="#about">关 于</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<!-- 轮播 -->
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+    </ol>
+  <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item active">
+        	<img src="//wwwimg.jeequ.net/wp-content/uploads/2015/04/google-chrome.jpg" alt="chrome">
+        	<div class="carousel-caption">
+        		<h1>Chrome</h1>
+        		<p>谷歌是由谷歌公司开发的网页浏览器</p>
+        		<p><a class="btn btn-primary" href="//www.google.com/intl/zh-CN/chrome/browser/desktop/index.html" target="_blank">点我下载</a></p>
+        	</div>
+        </div>
+        <div class="item">
+	        <img src="//www.firefox.com.cn/media/img/firefox/fx/android-phone-tablet.jpg?2013-06" alt="firefox">
+	        <div class="carousel-caption">
+	        	<h1>Firefox</h1>
+        		<p>火狐浏览器是一个开源浏览器</p>
+        		<p><a class="btn btn-primary" href="//www.firefox.com.cn/" target="_blank">点我下载</a></p>
+	        </div>
+        </div>
+	    	<div class="item">
+	        <img src="//images.apple.com/cn/safari/images/icloud_tabs_large.png" alt="safari">
+	        <div class="carousel-caption">
+	        	<h1>Safari</h1>
+        		<p>Safari浏览器是苹果计算机的最新操作系统中的浏览器。</p>
+        		<p><a class="btn btn-primary" href="//www.apple.com/cn/safari/" target="_blank">点我下载</a></p>
+	        </div>
+        </div>
+        <div class="item">
+	        <img src="//www-static.opera.com/static-heap/a0/a0d122ca1df51e0c70ec24d2dd7908f74f22bbd8/windows.png" alt="opera">
+	        <div class="carousel-caption">
+	        	<h1>Opera</h1>
+        		<p>Opera浏览器是挪威一家公司制作的支持多页面标签式浏览的网络浏览器。</p>
+        		<p><a class="btn btn-primary" href="//www.opera.com/zh-cn" target="_blank">点我下载</a></p>
+	        </div>
+        </div>
+        <div class="item">
+	        <img src="//c.s-microsoft.com/en-us/en-us/CMSImages/msw-win10-hero-device.png?version=be2c682d-3306-4d31-45aa-4bb11edcddcc" alt="IE">
+	        <div class="carousel-caption">
+	        	<h1>IE</h1>
+        		<p>IE浏览器是公司推出的一款网络浏览器。</p>
+        		<p><a class="btn btn-primary" href="//www.microsoft.com/zh-cn/download/internet-explorer.aspx" target="_blank">点我下载</a></p>
+	        </div>
+        </div>
+    </div>
+  <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">前一页</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-4">
+			<img src="//pic.sucaibar.com/pic/201307/06/024ccc243d.png" alt="">
+			<h2>Chrome</h2>
+			<p>Google Chrome,又称Google浏览器，是一个由Google（谷歌）公司开发的网页浏览器。</p>
+			<p><a class="btn btn-default" href="#">点我下载</a></p>
+		</div>		
+		<div class="col-md-4">
+			<img src="//img.sc115.com/uploads/sc/120506/2012050622371431.jpg" alt="">
+			<h2>Firefox</h2>
+			<p>中文名通常称为“火狐”或“火狐浏览器”，是一个开源网页浏览器。</p>
+			<p><a class="btn btn-default" href="#">点我下载</a></p>
+		</div>	
+		<div class="col-md-4">
+			<img src="//pic.sucaibar.com/pic/201306/21/7c06d2ec52.png" alt="">
+			<h2>Safari</h2>
+			<p>Safari浏览器是苹果计算机的最新操作系统中的浏览器。</p>
+			<p><a class="btn btn-default" href="#">点我下载</a></p>
+		</div>
+	</div>
+	<div class="row">	
+		<div class="col-md-4">
+			<img src="http://news.mydrivers.com/img/20120618/937e1bbc237040b5b66d995c70f0aa1a.png" alt="">
+			<h2>Opera</h2>
+			<p>Opera浏览器是挪威一家公司制作的支持多页面标签式浏览的网络浏览器。</p>
+			<p><a class="btn btn-default" href="#">点我下载</a></p>
+		</div>	
+		<div class="col-md-4">
+			<img src="http://pic.sucaibar.com/pic/201306/25/f58ead375f.png" alt="">
+			<h2>IE</h2>
+			<p>IE浏览器是公司推出的一款网络浏览器。</p>
+			<p><a class="btn btn-default" href="#">点我下载</a></p>
+		</div>	
+	</div>
+	<hr class="divider">
+</div>
+
+<div class="container">
+	<ul class="nav nav-tabs" id="tab-list"> 
+		<li class="active"><a href="#tab-chrome" data-toggle="tab">Chrome</a></li>
+		<li><a href="#tab-firefox" data-toggle="tab" role="tab">Firefox</a></li>
+		<li><a href="#tab-safari" data-toggle="tab">Safari</a></li>
+		<li><a href="#tab-opera" data-toggle="tab">Opera</a></li>
+		<li><a href="#tab-ie" data-toggle="tab">IE</a></li>
+	</ul>
+	<div class="tab-content">
+		<div class="tab-pane active" id="tab-chrome">
+			<div class="col-md-7">
+				<h1 class="feature-heading">Chrome <span class="text-muted"> Mac用户首选</span></h1>
+				<p class="indent">Safari，是苹果计算机的最新操作系统Mac OS X中的浏览器，使用了KDE的KHTML作为浏览器的运算核心。Safari在2003年1月7日首度发行测试版，并成为Mac OS X v10.3与之后的默认浏览器，也是iPhone与IPAD和iPod touch的制定浏览器。</p>
+			</div>
+			<div class="col-md-5">
+				<img src="//pic.sucaibar.com/pic/201306/21/7c06d2ec52.png" alt="">
+			</div>
+		</div>
+		<div class="tab-pane" id="tab-firefox">
+			<div class="col-md-5">
+				<img src="//pic.sucaibar.com/pic/201306/21/7c06d2ec52.png" alt="">
+			</div>
+			<div class="col-md-7">
+				<h1 class="feature-heading">Chrome <span class="text-muted"> Mac用户首选</span></h1>
+				<p class="indent">Safari，是苹果计算机的最新操作系统Mac OS X中的浏览器，使用了KDE的KHTML作为浏览器的运算核心。Safari在2003年1月7日首度发行测试版，并成为Mac OS X v10.3与之后的默认浏览器，也是iPhone与IPAD和iPod touch的制定浏览器。</p>
+			</div>						
+		</div>
+		<div class="tab-pane" id="tab-safari">
+			<div class="col-md-7">
+				<h1 class="feature-heading">Chrome <span class="text-muted"> Mac用户首选</span></h1>
+				<p class="indent">Safari，是苹果计算机的最新操作系统Mac OS X中的浏览器，使用了KDE的KHTML作为浏览器的运算核心。Safari在2003年1月7日首度发行测试版，并成为Mac OS X v10.3与之后的默认浏览器，也是iPhone与IPAD和iPod touch的制定浏览器。</p>
+			</div>
+			<div class="col-md-5">
+				<img src="//pic.sucaibar.com/pic/201306/21/7c06d2ec52.png" alt="">
+			</div>
+		</div>		
+		<div class="tab-pane" id="tab-opera">
+			<div class="col-md-5">
+				<img src="//pic.sucaibar.com/pic/201306/21/7c06d2ec52.png" alt="">
+			</div>
+			<div class="col-md-7">
+				<h1 class="feature-heading">Chrome <span class="text-muted"> Mac用户首选</span></h1>
+				<p class="indent">Safari，是苹果计算机的最新操作系统Mac OS X中的浏览器，使用了KDE的KHTML作为浏览器的运算核心。Safari在2003年1月7日首度发行测试版，并成为Mac OS X v10.3与之后的默认浏览器，也是iPhone与IPAD和iPod touch的制定浏览器。</p>
+			</div>	
+		</div>
+		<div class="tab-pane" id="tab-ie">
+			<div class="col-md-7">
+				<h1 class="feature-heading">Chrome <span class="text-muted"> Mac用户首选</span></h1>
+				<p class="indent">Safari，是苹果计算机的最新操作系统Mac OS X中的浏览器，使用了KDE的KHTML作为浏览器的运算核心。Safari在2003年1月7日首度发行测试版，并成为Mac OS X v10.3与之后的默认浏览器，也是iPhone与IPAD和iPod touch的制定浏览器。</p>
+			</div>
+			<div class="col-md-5">
+				<img src="//pic.sucaibar.com/pic/201306/21/7c06d2ec52.png" alt="">
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<hr class="divider">
+	<footer>
+		<p class="pull-right"><a href="#top">回到顶部</a></p>
+		<p>&copy; 2014bootstrap</p>
+	</footer>
+</div>
+<!-- 弹出框 -->
+<div class="modal fade" id="about">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button data-dismiss="modal" class="close">
+					<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+				</button>
+				<h4 class="modal-title">关于</h4>
+			</div>
+			<div class="modal-body">
+				今天学习了bootstrap的内容，做了这个网页！
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-default" data-dismiss="modal">了解了</button>
+			</div>
+		</div>
+	</div>
+</div>
+   <script src="http://libs.baidu.com/jquery/1.10.1/jquery.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+<script>
+// 注意把这部分放在jq引用之后
+$(document).ready(function(){
+  $(".dropdown-menu a").click(function(){
+		var href=$(this).attr("href");
+		$("#tab-list a[href='" + href + "']").tab("show");
+  });
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,247 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body,p,form,fieldset,table,td,div,dl,dt,dd,input,ul,ol,li {
+	margin: 0;
+	padding: 0;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+	font-size: 0;
+}
+.clearfix {
+	zoom:1;
+}
+
+header nav {
+    height: 60px;
+    line-height: 60px;
+    background-color: #333333;
+    padding-left: 40px;
+}
+header ul {
+    float: right;
+
+}
+header li {
+    float: left;
+    width: 90px;
+}
+header a {
+    text-decoration: none;
+    color: #fff;
+}
+header a.current {
+    color: #ccc;
+}
+
+.container {
+    padding: 22px 20px;
+    background-color: #DEDEDE;
+}
+.container a {
+    color: #4593fd;
+}
+ul {
+    list-style: none;
+}
+figure {
+    border: 1px solid #333333;
+    width: 100px;
+    padding: 10px;
+}
+figcaption {
+    text-align: center;
+    font-size: 12px;
+    padding: 5px;
+}
+figure img {
+    width: 80px;
+    height: 80px;
+}
+table {
+    width: 100%;
+    font-size: 12px;
+    border-collapse: collapse;
+}
+table thead {
+    background-color: #000000;
+    color: #fff;
+}
+th, td {
+    height: 24px;
+    padding-left: 5px;
+    text-align: left;
+    border: 1px solid #CCCCCC;
+}
+table tfoot {
+    background-color: #CCCCCC;
+}
+.container table a {
+    color: #795da3;
+}
+article, aside {
+    padding: 35px 22px;
+    -webkit-box-shadow:  2px 3px 10px #5A5A5A;
+    -moz-box-shadow:  2px 3px 10px #5A5A5A;
+    box-shadow:  2px 3px 10px #5A5A5A;
+}
+article {
+    margin-bottom: 22px;
+    background-color: #fff;
+}
+h3 {
+    color: #DEDEDE;
+}
+article p {
+    font-size: 14px;
+    line-height: 20px;
+    text-indent: 2em;
+}
+span {
+    color: grey;
+    font-size: 12px;
+}
+aside {
+    margin-top: 40px;
+    margin-right: 20px;
+    background-color: #fff;
+}
+aside .aside-title {
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+    border-left: 2px solid #606c71;
+    height: 35px;
+    line-height: 35px;padding-left: 5px;
+    margin-bottom: 10px;
+}
+.intro-submit {
+    background-color: #3355D0;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    border: none;
+    font-size: 16px;
+}
+footer {
+    height: 70px;
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 70px;
+}
+/*table样式做一次*/
+aside form {
+    display: table;
+    font-size: 14px;
+    width: 100%;
+}
+aside input::-webkit-input-placeholder {
+    color: black;
+}
+aside input:-moz-placeholder {
+    color: black;
+}
+aside input::-moz-placeholder {
+    color: black;
+}
+aside input:-ms-input-placeholder {
+    color: black;
+}
+aside form .hint {
+    color: #cccccc;
+    font-size: 12px;
+}
+aside form input {
+    height: 28px;
+    padding: 5px;
+    vertical-align: middle;
+}
+aside form label {
+    font-size: 12px;
+    margin-right: 5px;
+}
+aside form .table-row .table-cell textarea {
+    vertical-align: top;
+    width: 70%;
+}
+aside form .table-row {
+    display: table-row;
+}
+aside form .table-cell {
+    display: table-cell;
+}
+aside form .table-right {
+    text-align: right;
+    padding-right: 15px;
+    height: 34px;
+    width: 26%;
+}
+
+/*普通样式做一次*/
+/*aside form {*/
+    /*font-size: 14px;*/
+    /*padding: 0 30px;*/
+    /*width: 100%;*/
+/*}*/
+/*aside input::-webkit-input-placeholder {*/
+    /*color: black;*/
+/*}*/
+/*aside input:-moz-placeholder {*/
+    /*color: black;*/
+/*}*/
+/*aside input::-moz-placeholder {*/
+    /*color: black;*/
+/*}*/
+/*aside input:-ms-input-placeholder {*/
+    /*color: black;*/
+/*}*/
+/*aside form .hint {*/
+    /*color: #cccccc;*/
+    /*font-size: 12px;*/
+/*}*/
+/*aside form input {*/
+    /*height: 28px;*/
+    /*padding: 5px;*/
+    /*vertical-align: middle;*/
+/*}*/
+/*aside form label {*/
+    /*margin-right: 5px;*/
+/*}*/
+/*aside form label.row-left {*/
+    /*width: 26%;*/
+    /*text-align: right;*/
+    /*display: inline-block;*/
+    /*height: 36px;*/
+/*}*/
+/*aside form label.row-left.row-top {*/
+    /*vertical-align: top;*/
+/*}*/
+/*aside form .space {*/
+    /*color: #cccccc;*/
+    /*font-size: 12px;*/
+    /*vertical-align: top;*/
+    /*height: 15px;*/
+    /*text-align: left;*/
+/*}*/
+/*aside form textarea {*/
+    /*width: 70%;*/
+/*}*/

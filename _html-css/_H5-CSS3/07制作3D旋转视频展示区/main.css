@@ -1,0 +1,80 @@
+/*                              ²¼               ¾Ö                */
+ul,li {
+	list-style: none;
+}
+body {
+    text-align: center;
+    color: #414142;
+    background-color: rgb(246,241,232);
+    background-image: radial-gradient(farthest-side ellipse at center, rgba(246,241,232,.85) 39%, rgba(212,204,186,.5) 100%),
+url("bg.jpg");
+    background-size: cover;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+    font-size: 0;
+}
+.clearfix {
+    zoom:1;
+}
+body,* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+h1 {
+    margin-top: 15px;
+}
+.list {
+    background: #74adaa;
+    display: block;
+    margin: 10px 450px;
+    perspective: 35000px;
+}
+.item {
+    width: 310px;
+    height: 100px;
+    float: left;
+    margin: 20px 10px;
+    position: relative;
+    transition: transform .5s linear;
+    transform-style: preserve-3d;
+}
+.item:hover {
+    transform: translateZ(-50px) rotateX(90deg);
+}
+img {
+    display: block;
+    transform: translateZ(50px);
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #333;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 310px;
+    height: 100px;
+}
+.txt {
+    transform: rotateX(-90deg) translateZ(50px);
+    border-radius: 15px;
+    position: absolute;
+    padding: 10px;
+    box-shadow: 2px 2px 5px #333;
+    width: 310px;
+    height: 100px;
+    background: rgb(236,241,244);
+    background-image: linear-gradient(to bottom, rgba(236,241,244,1) 0%, rgba(190,202,217,1) 100%);
+}
+.txt p {
+    font-size: 12px;
+    text-indent: 2em;
+    margin-top: 10px;
+    text-align: justify;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>   <!-- html5定义 -->
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">  <!-- 在IE浏览器中运行最新的渲染模式 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">  <!-- 初始化移动浏览显示 -->
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="renderer" content="webkit">  <!-- 使浏览器采用高速模式渲染页面 -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+     <!-- 载入bootstrap的样式 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="link.css">    <!-- 载入自己的样式 -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+     <!-- 以下两个插件用于在IE8以及以下版本浏览器支持HTML5元素和媒体查询，如果不需要用可以移除 -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>   使低版本IE兼容html5新增的标签
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>    使低版本IE兼容css3样式
+    <![endif]-->
+   
+  </head>
+  <body>
+
+<button class="btn btn-primary">点击我</button>
+<div class="modal fade" id="mymodal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">close</span></button>
+                <h4 class="modal-title">模拟弹出窗标题</h4>
+            </div>
+            <div class="modal-body">
+                <p>模拟弹出框内容
+                模拟弹出框内容
+                模拟弹出框内容</p>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-default" data-dismiss="modal">关闭</button> 
+              <button class="btn btn-primary">保存</button> 
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="//libs.baidu.com/jquery/1.10.1/jquery.js"></script>
+或者   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<script>
+  $(function(){
+    $(".btn").click(function(){
+      $("#mymodal").modal("toggle");
+    });
+  });
+</script>
+
+  </body>
+</html>

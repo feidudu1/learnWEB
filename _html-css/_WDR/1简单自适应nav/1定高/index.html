@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>web nav</title>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+    <style>
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            margin: 0;
+            -ms-text-size-adjust: none;
+            -webkit-text-size-adjust: none;  /*防止屏幕横竖屏转向时改变字体大小*/
+        }
+        html {
+            background-color: #F7F7F7;
+        }
+        body {
+            line-height: 1.4;
+            background-color: #FFFFFF;
+        }
+        .app {
+            position: relative;
+            display: -webkit-flex;
+            align-items: center;
+            border-bottom: 1px solid #cfcfcf;
+            padding: 13px 10px;  /*有这个上下padding值，则窗口过窄时，文字不会溢出.app*/
+        }
+        .update {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 44px;
+            height: 32px;
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAABACAMAAACpzkDwAAAAY1BMVEX////kN yDkNyDkNyDkNyDkNyDkNyDkNyDkNyDkNyD99vXkNyDkNyDkNyDkNyD1xcHkNyD////99vX76+r64d/41tT2y8j0wLzztK/xqKLvm5TtjYXrf 3bqcGToX1HmTTzkNyDPEQg9AAAAEXRSTlMAESIzRFVmd4iZqqq7zN3u7uYy9NoAAAHASURBVHja1dXbkoIwEATQJtyXyxJFIKiE///KJSJCVh Q3ZB62H7Sssk6Nk8agt54ijXwG2EXzJHAxxuKkScAwx5KaRS702FBTbdQnuKtrI9V3sJbFV0rezR9aIWouNzcQrKs6fOHi9i74FPG+AiHD60z mnBFuhHjPJh7eZhVuN6sVMeATuO+bRr3Ksu234TzAdh4wV5048WYTznzgD3BfV93gnvsNOPWAz+FusWJev4GzT9kX8COdKav1uL1P+gLOfWAv 3KofoT/gRejAABZPPf4FJwzYDTeqGxpc+IAZrK2i5hcdjh0Yw7IUChbV9C83w7kHmMOC3+BmePIkP/QLOHGwA+74cVxFxdszr2bYZLtLuFJrVbA 8XU+3VY9wxrAPburH4V34QU5wDOyE720YYHkc740BNl/DEj6oCl/VKR7lCH+7sAGX0xVXXe/H+QUr8NOV5oAEjgESOAINHIIGDkAD25h3DbbjguL cVuEYNHACGjhzaOCcgQQuXNDAAWjgGDSwxYPTYRc0cAgaOAURzIh g24uY4BxEsEcEx6CBC4cIjkADkwwMkqqNMM3AoBoYVAODphIKZkRwSuTCxz/LDzuIyYMbR8EsAAAAAElFTkSuQmCC') no-repeat;
+            background-size: contain; /*标签有弧形*/
+        }
+        .icon {
+            width: 47px;
+            height: 47px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .icon-img {
+            /*width: 47px;    不要设置具体的高宽值*/
+            /*height: 47px;*/
+            max-width: 100%;  /*这个使宽度过窄时能显示整个图片，而不是图片的一部分*/
+            display: block;  /*这个啥用没搞清*/
+        }
+        .txt {
+            margin-left: 9px;
+            margin-right: auto;
+            display: block;
+        }
+        .head {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .content {
+            font-size: 12px;
+
+        }
+        .btn {
+            background-color: #3CBA1A;
+            color: #fff;
+            text-decoration: none;
+            /*width: 52px;       不要设置高宽值，否则无法自适应*/
+            /*height: 26px;*/
+            padding: 4px 13px;
+            text-align: center;
+            border-radius: 4px;
+            font-size: 13px;
+            /*line-height: 26px;     这个虽然能使居中，但是两行时会增加高度*/
+            display: block;   /*这个啥用没搞清*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <div class="update"></div>
+        <div class="icon">
+            <img src="icon.png" class="icon-img">
+        </div>
+        <div class="txt">
+            <div class="head">忍者必死二</div>
+            <div class="content">史上最萌的手游，安装量过10万</div>
+        </div>
+        <a class="btn" href="#">下载</a>
+    </div>
+</body>
+</html>

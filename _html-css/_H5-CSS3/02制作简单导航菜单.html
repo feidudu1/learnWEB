@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>导航</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul,li {
+            list-style: none;
+            display: inline-block;
+        }
+        a {
+            text-decoration: none;
+            display: inline-block;
+            color: #fff;
+            text-transform: capitalize;
+            text-shadow: 0 1px 2px black;
+            -webkit-transition: all .2s ease-in;
+            -moz-transition: all .2s ease-in;
+            -ms-transition: all .2s ease-in;
+            -o-transition: all .2s ease-in;
+            transition: all .2s ease-in;
+        }
+        ul {
+            width: 560px;
+            height: 50px;
+            font: bold 14px/50px Arial;
+            text-align: center;
+            background: #f65f57;
+            margin: 40px auto;
+            display: block;
+            border-radius: 5px;
+            -webkit-box-shadow: 1px 1px 5px black;
+            -moz-box-shadow:  1px 1px 5px black;
+            box-shadow:  1px 1px 5px black;
+        }
+        li {
+            padding: 0 16px;/*用padding而不是width以确保字比较多的两边与字比较少的两边一样长的空白*/
+            position: relative;
+        }
+        li:after {
+            content: "";
+            width: 1px;
+            height: 15px;
+            position: absolute;
+            top: 20px;
+            right: 0;
+            background: linear-gradient(to bottom,black,black);
+        }
+        li:last-child:after {
+            width: 0;
+            height: 0;
+        }
+        a:hover {
+            -webkit-transform: rotate(8deg);
+            -moz-transform: rotate(8deg);
+            -ms-transform: rotate(8deg);
+            -o-transform: rotate(8deg);
+            transform: rotate(8deg);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">about me</a></li>
+            <li><a href="#">portfolio</a></li>
+            <li><a href="#">blog</a></li>
+            <li><a href="#">resources</a></li>
+            <li><a href="#">contact me</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,32 @@
+
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd,input {
+	margin: 0;
+	padding: 0;
+}
+.container {
+	background-color: #ccc;
+	width: 400px;
+	height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /*margin-top: -100px;*/
+    /*margin-left: -200px;*/
+    overflow: hidden;
+}
+.circle {
+	background-color: #fc0;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+    position: absolute;
+}
+.left {
+    top: -50px;
+    left: -50px;
+}
+.right {
+    bottom: -50px;
+    right: -50px;
+}

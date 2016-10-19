@@ -1,0 +1,210 @@
+/*                              布               局                */
+ul,li {
+	list-style: none;
+}
+:root {
+    background-color: #edecec;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+    font-size: 0;
+}
+.clearfix {
+    zoom:1;
+}
+body,* {
+    margin: 0;
+    padding: 0;
+}
+.nav-menu {
+    background: #74adaa;
+    width: 950px;
+    margin: 50px auto 150px;
+    display: block;
+}
+.nav-menu > li {
+    float: left;
+    border-right: 1px solid #94c0be;
+}
+.nav-menu > li:last-child {
+    border: none;
+}
+.nav-menu li a {
+    display: block;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 15px 30px 15px 31px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: capitalize;
+    overflow: visible;
+}
+.nav-menu ul {
+    position: absolute;
+    width: 200px;
+    font-size: 14px;
+    line-height: 40px;
+    text-align: left;
+}
+.three-d {
+    position: relative;
+}
+.three-d-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.back, .front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #74adaa;
+    padding: 15px 30px 15px 31px;
+    color: #fff;
+    box-sizing: border-box;
+}
+/*背景颜色设置*/
+.nav-menu li .active .front,
+.nav-menu li .active .back,
+.nav-menu li a:hover .back,
+.nav-menu li a:hover .front {
+    background-color: #51938f;
+    -webkit-background-size: 5px 5px;
+    background-size: 5px 5px;
+    background-position: 0 0, 30px 30px;
+    background-image: linear-gradient(45deg, #478480 25%, transparent 25%, transparent 75%, #478480 75%, #478480),
+    linear-gradient(45deg, #478480 25%, transparent 25%, transparent 75%, #478480 75%, #478480);
+    background-position: 0 0, 30px 30px;
+    background-image: -webit-linear-gradient(45deg, #478480 25%, transparent 25%, transparent 75%, #478480 75%, #478480),
+    linear-gradient(45deg, #478480 25%, transparent 25%, transparent 75%, #478480 75%, #478480);
+    background-image: -moz-linear-gradient(45deg, #478480 25%, transparent 25%, transparent 75%, #478480 75%, #478480),
+    linear-gradient(45deg, #478480 25%, transparent 25%, transparent 75%, #478480 75%, #478480);
+    background-image: -ms-linear-gradient(45deg, #478480 25%, transparent 25%, transparent 75%, #478480 75%, #478480),
+    linear-gradient(45deg, #478480 25%, transparent 25%, transparent 75%, #478480 75%, #478480);
+    background-image: -o-linear-gradient(45deg, #478480 25%, transparent 25%, transparent 75%, #478480 75%, #478480),
+    linear-gradient(45deg, #478480 25%, transparent 25%, transparent 75%, #478480 75%, #478480);
+}
+
+
+/*                              动               画                              */
+/*一*/
+/*3d主体属性，该demo的perspective和transform-style
+在两个不同的元素中，并且将perspective移到three-d-box中失效？*/
+.three-d {
+    -webkit-perspective: 200px;
+    -moz-perspective: 200px;
+    -ms-perspective: 200px;
+    -o-perspective: 200px;
+    perspective: 200px;
+}
+.three-d-box {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+/*二*/
+/*front初始时在z轴正方向25px处，与屏幕平行*/
+.front {
+    -webkit-transform: rotatex(0deg) translatez(25px);
+    -moz-transform: rotatex(0deg) translatez(25px);
+    -ms-transform: rotatex(0deg) translatez(25px);
+    -o-transform: rotatex(0deg) translatez(25px);
+    transform: rotatex(0deg) translatez(25px);
+}
+/*back初始时在z轴正方向25px处，与屏幕呈90度*/
+.back {
+    -webkit-transform: rotatex(-90deg) translatez(25px);
+    -moz-transform: rotatex(-90deg) translatez(25px);
+    -ms-transform: rotatex(-90deg) translatez(25px);
+    -o-transform: rotatex(-90deg) translatez(25px);
+    transform: rotatex(-90deg) translatez(25px);
+}
+/*三*/
+/*front和back都向里面旋转90度*/
+.three-d:not(.active):hover .three-d-box,
+.three-d:not(.active):focus .three-d-box {
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+}
+.three-d-box {
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+/*四*/
+/*二级菜单初始状态是隐藏*/
+.nav-menu ul {
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    -ms-transform: rotateX(-90deg);
+    -o-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+}
+/*五*/
+/*点击blog，二级菜单出现动画*/
+.nav-menu ul {
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+    /*origin设置为0和0，使得二级菜单从左上角向下展开，
+    如果不设置，则从二级菜单的中间分别向上和向下展开*/
+    -webkit-transform-origin: 0px 0px;
+    -moz-transform-origin: 0px 0px;
+    -ms-transform-origin: 0px 0px;
+    -o-transform-origin: 0px 0px;
+    transform-origin: 0px 0px;
+}
+.nav-menu > li:hover ul {
+    display: block;
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
+/*六*/
+/*必须要设置z轴在-25px处，否则li元素上下会多出来一些边距（垂直放置的back和front）*/
+.three-d:not(.active):hover .three-d-box,
+.three-d:not(.active):focus .three-d-box {
+    -wekbit-transform: translateZ(-25px) rotateX(90deg);
+    -moz-transform: translateZ(-25px) rotateX(90deg);
+    -o-transform: translateZ(-25px) rotateX(90deg);
+    -ms-transform: translateZ(-25px) rotateX(90deg);
+    transform: translateZ(-25px) rotateX(90deg);
+}
+
+.three-d-box {
+    -webkit-transform: translatez(-25px);
+    -moz-transform: translatez(-25px);
+    -ms-transform: translatez(-25px);
+    -o-transform: translatez(-25px);
+    transform: translatez(-25px);
+}
+
+
+
