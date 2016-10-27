@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 14</title>
+  </head>
+<body>
+
+  <h3>污染城市列表</h3>
+  <ul id="aqi-list">
+<!--
+    <li>第一名：福州（样例），10</li>
+  	<li>第二名：福州（样例），10</li> -->
+  </ul>
+
+<script type="text/javascript">
+
+var aqiData = [
+  ["北京", 90],
+  ["上海", 50],
+  ["福州", 10],
+  ["广州", 50],
+  ["成都", 90],
+  ["西安", 100]
+];
+
+(function () {
+
+  /*
+  在注释下方编写代码
+  遍历读取aqiData中各个城市的数据
+  将空气质量指数大于60的城市显示到aqi-list的列表中
+  */
+
+// 方法一：
+  // var $ul = document.getElementById('aqi-list');
+  // var newData = aqiData.sort(sortNum);
+  // function sortNum(a,b) {   //此处的a和b都是数组的一项，这里不能用a[1]
+  //   return b[1] - a[1];
+  // }
+  // for(var i = 0; i < aqiData.length; i++){
+  //   if (newData[i][1] > 60){
+  //     var $li = document.createElement('li');
+  //     $li.innerHTML = '第' + (i+1) + '名：' + newData[i][0] + ',' + newData[i][1];
+  //     $ul.appendChild($li);
+  //   }
+  // }
+
+// 方法二：
+//   var $ul = document.getElementById('aqi-list');
+// // aqiData.sort后，aqiData就是排序后的，因此不用赋值给newData
+//   aqiData.sort(function(a,b) {
+//     return b[1] - a[1];
+//   });
+//   for(var i = 0; i < aqiData.length; i++){
+//     if (aqiData[i][1] > 60){
+//       var $li = document.createElement('li');
+//       $li.innerHTML = '第' + (i+1) + '名：' + aqiData[i][0] + ',' + aqiData[i][1];
+//       $ul.appendChild($li);   //多次使用append改变dom结构不好
+//     }
+//   }
+
+// 方法三：
+  var $ul = document.getElementById('aqi-list');
+  var content = '';  //如果这个用var content;那么，content的原始值为undefined，会显示在列表中
+    aqiData.filter(function (item) {   //var b = a.filter();   a还是原来的数组，b才是过滤后的数组
+      return (item[1] > 60);
+  }).sort(function (a,b) {
+      return b[1] - a[1];
+  }).forEach(function (result,i) {
+        content += '<li>第' + (i+1) + '名：' + result[0] + ',' + result[1] + '</li>';
+        console.log(content);
+  });
+  $ul.innerHTML = content;
+
+})();
+
+</script>
+</body>
+</html>

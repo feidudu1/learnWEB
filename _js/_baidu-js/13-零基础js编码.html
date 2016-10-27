@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Task 13</title>
+  </head>
+<body>
+
+  <label>请输入北京今天空气质量：<input id="aqi-input" type="text"></label>
+  <button id="button">确认填写</button>
+
+  <div>您输入的值是：<span id="aqi-display">尚无录入</span></div>
+
+<script type="text/javascript">
+
+;(function() {
+    /*
+  在注释下方写下代码
+  给按钮button绑定一个点击事件
+  在事件处理函数中
+  获取aqi-input输入的值，并显示在aqi-display中
+  */
+
+// 方法一
+    var $ = function (id) {
+        return document.getElementById(id);  //这里不能用document.getElementById('id');
+    }
+    $('button').onclick = function(){
+	  handle();
+    }
+    $('aqi-input').onkeyup = function (event) {
+        if(event.keyCode === 13) {
+            handle();
+        }
+    };
+    var handle = function () {
+        var aqi = parseInt($('aqi-input').value);
+        if(!isNaN(aqi) && (aqi >= 0) && (aqi <=1000)){
+            $('aqi-display').innerHTML = aqi;
+        } else {
+            alert($('aqi-input').value + '不是有效的aqi值，请输入0——1000的有效整数');
+        }
+    };
+
+  // 方法二：
+  // var btn = document.getElementById('button');
+  // var aqiInput = document.getElementById('aqi-input');
+  // var aqiDisplay = document.getElementById('aqi-display');
+  // btn.addEventListener('click',function(){
+  //   var input = aqiInput.value;
+  //   if(input){
+  //     aqiDisplay.innerHTML = input;
+  //   }else{
+  //     aqiDisplay.innerHTML = '输入为空';
+  //   }
+  // })
+
+  // 方法三：
+  // btn.onclick = function(){
+  //   var input = aqiInput.value;
+  //   if(input){
+  //     aqiDisplay.innerHTML = input;
+  //   }else{
+  //     aqiDisplay.innerHTML = '输入为空';
+  //   }
+  // }
+
+})();
+
+
+</script>
+</body>
+</html>

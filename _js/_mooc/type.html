@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf8">
+    <title>判断类型(引用类型instanceof,基本类型typeof)</title>
+
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+         * param1 Array
+         * param2 Array
+         * return true or false
+         */
+        //  以下代码在浏览器中会提示通过，但是在慕课网中没有提示
+        function arraysSimilar(arr1, arr2){
+            if(arr1 instanceof Array && arr2 instanceof Array) {  //前提是arr1和arr2都是数组，才能有length属性（虽然字符串也有），当arr1为null的时候没有，控制台会提示null没有length
+                if(arr1.length == arr2.length) {
+                    var a = [],
+                        b = [];
+                        // m = a.sort(),  该定义要放在type函数调用后，否则不会对arr排序
+                        // n = b.sort();
+                    type(a,arr1);
+                    type(b,arr2);
+                    var m = a.sort(),
+                        n = b.sort();
+                    for (var u=0; u<arr1.length; u++){
+                        if(m[u] == n[u]) {
+                            return true;
+                        }else{
+                            return false;
+                        }
+                    }
+                } else {
+                    return false;
+                }
+            } else {
+                return false;
+            }
+        }
+        function type(w,arr){
+                for (var i=0; i<arr.length; i++){
+                    if(arr[i] === window){
+                        w.push('window');
+                    }else {
+                        var x = typeof arr[i];
+                        if(x == 'object'){
+                            if(arr[i] instanceof Object){
+                                if(arr[i] instanceof Date){
+                                    w.push('Date');
+                                }else{
+                                    w.push('object');
+                                }
+                            }
+                            else{
+                                w.push('null');  //也可以跟window一样的写法，null不能通过instanceof直接判断
+                            }
+                        }else{
+                            w.push(x);
+                        }
+                    }
+                }
+            }
+    </script>
+    <script src="type.js"></script>
+</body>
+</html>
