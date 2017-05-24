@@ -21,16 +21,16 @@
 - 样式采用 less , 维护了常用的样式模块和方法
 
 #### 本人参与项目
-- 定制商城开发（如洋东西商城和韩束嗨云商城）
+- **定制商城开发**（如洋东西商城和韩束嗨云商城）
 
 洋东西商城必须在微信中打开，网址：http://m.yangdongxi.com/?partner_code=5-5EV4JUNHI&from=singlemessage&isappinstalled=0
 
 韩束嗨云可在手机任意平台打开，网址：http://m.haiyn.com/mine-haike.html?from=singlemessage&isappinstalled=0
 
-- 功能开发
+- **功能开发**
 
 直播和拼团功能
-- react项目
+- **react项目**
 
 云车保，该项目没有用redux
 
